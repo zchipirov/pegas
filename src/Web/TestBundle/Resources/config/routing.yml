@@ -1,0 +1,11 @@
+_welcome:
+    pattern:  /
+    defaults: { _controller: WebTestBundle:Demo:index }
+    
+_about:
+    pattern:  /about
+    defaults: { _controller: WebTestBundle:Demo:about }
+    
+_contact:
+    pattern:  /contact
+    defaults: { _controller: WebTestBundle:Demo:contact }

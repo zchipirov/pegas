@@ -1,0 +1,29 @@
+{% extends 'WebTestBundle::layout.html.twig' %}
+
+{% block title %}Контакты. Тестовый проект{% endblock %}
+
+{% block content %}
+    <div class="col-lg-13">
+        {% if message is defined and message != '' %}
+            <div class="alert alert-success">{{ message }}</div>
+            
+            <div class="col-lg-6">
+                <a href="{{ path('_contact') }}" class="btn btn-primary" role="button">Отправить новое</a>
+            </div>
+            <div class="col-lg-6">
+                <a href="{{ path('_welcome') }}" class="btn btn-primary" role="button">Вернуться на главную</a>
+            </div>
+        {% else %}
+        <h3><span class="glyphicon glyphicon-envelope"></span> Напишите нам</h3>
+        <br>
+        <form action="{{ path('_contact') }}" method="POST" {{ form_enctype(form) }} style="width: 40%;">
+            {{ form_errors(form) }}
+            {{ form_label(form.title, 'Заголовок') }} {{ form_widget(form.title, { 'attr': {'class': 'form-control'} }) }}
+            {{ form_label(form.message, 'Сообщение') }} {{ form_widget(form.message, { 'attr': {'class': 'form-control'} }) }}
+            <br>
+
+            <input type="submit" value="Отправить" class="form-control" />
+        </form>
+        {% endif %}
+    </div>
+{% endblock %}

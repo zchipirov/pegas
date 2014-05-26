@@ -1,0 +1,13 @@
+<strong>Параметры:</strong><br>
+{% if params is defined %}
+<ul>
+    {% for key, value in params %}
+        <li>{{ key }}: {{ value }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<br><br>
+<strong>Подпись сообщения:</strong><br>
+{% if content is defined %}
+    {{ content }}
+{% endif %}

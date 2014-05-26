@@ -1,0 +1,21 @@
+{% extends 'WebTestBundle::layout.html.twig' %}
+
+{% block title %}Главная страница. Тестовый проект{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>Приемная Pegas</h1>
+        <p class="lead">Вы можете отправить нам письмо и в кратнчайшие сроки сы ответим на Ваши вопросы!</p>
+        <p><a class="btn btn-lg btn-success" href="{{ path('_contact') }}" role="button">отправить письмо</a></p>
+    </div>
+
+    <div class="col-lg-6">
+        <h4>Общая информация</h4>
+        <p>PEGAS Touristik - один из лидеров российской туристической отрасли и одна из крупнейших международных туристических компаний. История компании началась в последней четверти ХХ века.</p>
+    </div>
+
+    <div class="col-lg-6">
+      <h4>Миссия и цели</h4>
+        <p>Мы работаем, чтобы сделать PEGAS Touristik лучшим туроператором для своих клиентов.</p>
+    </div>
+{% endblock %}
